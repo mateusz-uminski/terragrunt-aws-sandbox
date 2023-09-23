@@ -19,3 +19,7 @@ module "vpc" {
   domain_name                 = "ew1.sandbox.corp.microcloud.com"
   vpc_flow_logs_s3_bucket_arn = ""
 }
+
+output "vpc_id" {
+  value = module.vpc.vpc_id
+}
