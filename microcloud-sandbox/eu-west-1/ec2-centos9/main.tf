@@ -1,7 +1,7 @@
 locals {
   org      = var.org_abbreviated_name
   vpc_name = "main"
-  vpn_cidr = "172.18.0.0./16"
+  vpn_cidr = "172.18.0.0/16"
 }
 
 data "http" "my_ip" {
