@@ -1,6 +1,7 @@
 locals {
   org      = var.org_abbreviated_name
   vpc_name = "main"
+  vpn_cidr = "172.18.0.0./16"
 }
 
 data "http" "my_ip" {
@@ -48,7 +49,7 @@ module "ec2" {
     touch /helloworld.txt
   EOF
 
-  allowed_ingress_cidrs = ["${chomp(data.http.my_ip.response_body)}/32", "172.18.0.0/16"]
+  allowed_ingress_cidrs = ["${chomp(data.http.my_ip.response_body)}/32", local.vpn_cidr]
 }
 
 output "ec2_public_ip" {
