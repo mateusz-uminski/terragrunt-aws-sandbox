@@ -1,0 +1,10 @@
+# This file should be used as an example when creating the config.yaml file.
+# The config.yaml file should only contain variables that we do not want to
+# accidentally commit.
+#
+# All variables listed in this file are required!
+
+# common variables
+mcd_account_id_sandbox: "111111111111"
+
+# stack variables
