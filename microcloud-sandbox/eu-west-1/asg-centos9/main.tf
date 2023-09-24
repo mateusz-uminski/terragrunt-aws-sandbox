@@ -9,7 +9,7 @@ data "http" "my_ip" {
 }
 
 module "asg" {
-  source = "git::https://github.com/mateusz-uminski/terraform-aws-modules//asg?ref=feat/asg"
+  source = "git::https://github.com/mateusz-uminski/terraform-aws-modules//asg?ref=asg/v0.1.2"
 
   # required variables
   org_abbreviated_name = local.org
